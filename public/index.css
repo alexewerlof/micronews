@@ -1,0 +1,40 @@
+html, body {
+    background-color: whitesmoke;
+    color: black;
+}
+
+header, footer {
+    background-color: rebeccapurple;
+    color: white;
+    padding: .5em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+header ol li {
+    display: inline-block;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+
+header ol li + li {
+    border-left: 0.1em solid currentColor;
+}
+
+.news-list {
+    list-style-type: none;
+}
+
+.news-source, .news-subtext {
+    color: #8a8181;
+}

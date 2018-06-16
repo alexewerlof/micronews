@@ -13,6 +13,11 @@ const app = new Vue({
         getSource(url) {
             const u = new URL(url);
             return u.hostname;
+        },
+        getUserPage(username) {
+            const u = new URL(window.origin);
+            u.pathname = `/users/${username}`
+            return u.toString();
         }
     },
     moo() {
@@ -36,6 +41,7 @@ async function readBasics() {
     const response = await fetch('/api/basics');
     const json = await response.json();
     app.siteName = json.siteName
+    window.document.title = json.siteName
     app.siteVersion = json.siteVersion
 }
 

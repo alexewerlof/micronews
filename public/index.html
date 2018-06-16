@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
 <body>
-    Echo JS 0.11.0top latest random submitreplies hanifbbz@gmail.com (626) | logout
     <div id="app">
         <header>
             {{siteName}} {{siteVersion}}
@@ -19,27 +19,29 @@
                 </ol>
             </nav>
         </header>
-        {{ message }}
-        {{ news.length }}
-        <ol>
-            <li v-for="n in news" :key="n.id">
-                <article>
-                    <h2>
-                        <a :href="n.url">
-                            {{n.title}}
-                        </a>
-                    </h2>
-                    <address>{{getSource(n.url)}}</address>
-                    <p>
-                        <span>{{n.up}}</span> up
-                        and
-                        <span>{{n.down}}</span> down
-                        , posted by {{n.username}} {{n.when}}
-                        <a href="#">discuss</a>
-                    </p>
-                </article>
-            </li>
-        </ol>
+        <main>
+            <ol class="news-list">
+                <li v-for="n in news" :key="n.id">
+                    <article class="news-item">
+                        <h2>
+                            <a :href="n.url">
+                                {{n.title}}
+                            </a>
+                            <span class="news-source">({{getSource(n.url)}})</span>
+                        </h2>
+                        <p class="news-subtext">
+                            <span>{{n.up}}</span> 🔺
+                            and
+                            <span>{{n.down}}</span> 🔻
+                            , posted by
+                            <a :href="getUserPage(n.username)">{{n.username}}</a>
+                            <a href="">{{n.when}}</a>
+                            <a href="#">discuss</a>
+                        </p>
+                    </article>
+                </li>
+            </ol>
+        </main>
 
         <footer>
             about | source code | rss feed | twitter

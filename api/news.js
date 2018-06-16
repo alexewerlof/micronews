@@ -53,7 +53,7 @@ module.exports = function (router) {
                     url: 'http://www.dzurico.com/apollo-server-2-0-real-time-data-with-subscriptions/',
                     up: 1,
                     down: 0,
-                    username: 'http://www.echojs.com/user/daniele.zurico%40gmail.com',
+                    username: 'daniele.zurico@gmail.com',
                     when: '4 hours ago'
                 },
                 {
