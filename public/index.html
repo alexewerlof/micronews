@@ -20,27 +20,7 @@
             </nav>
         </header>
         <main>
-            <ol class="news-list">
-                <li v-for="n in news" :key="n.id">
-                    <article class="news-item">
-                        <h2>
-                            <a :href="n.url">
-                                {{n.title}}
-                            </a>
-                            <span class="news-source">({{getSource(n.url)}})</span>
-                        </h2>
-                        <p class="news-subtext">
-                            <span>{{n.up}}</span> 🔺
-                            and
-                            <span>{{n.down}}</span> 🔻
-                            , posted by
-                            <a :href="getUserPage(n.username)">{{n.username}}</a>
-                            <a href="">{{n.when}}</a>
-                            <a href="#">discuss</a>
-                        </p>
-                    </article>
-                </li>
-            </ol>
+            <news-list :list="news" />
         </main>
 
         <footer>

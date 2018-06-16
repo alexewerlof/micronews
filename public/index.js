@@ -1,4 +1,5 @@
 import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.esm.browser.js';
+import './news-list.js';
 
 const app = new Vue({
     el: '#app',
@@ -8,20 +9,6 @@ const app = new Vue({
         siteVersion: '0',
         news: [],
         sections: []
-    },
-    methods: {
-        getSource(url) {
-            const u = new URL(url);
-            return u.hostname;
-        },
-        getUserPage(username) {
-            const u = new URL(window.origin);
-            u.pathname = `/users/${username}`
-            return u.toString();
-        }
-    },
-    moo() {
-        return 'moo'
     }
 })
 
