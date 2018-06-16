@@ -1,0 +1,12 @@
+---
+extends:
+    - eslint:recommended
+parserOptions:
+    ecmaVersion: 7
+env:
+    es6: true
+    node: ture
+rules:
+    indent:
+    - warn
+    - 4
