@@ -1,10 +1,11 @@
 html, body {
     background-color: whitesmoke;
     color: black;
+    font-family: sans-serif;
 }
 
 header, footer {
-    background-color: rebeccapurple;
+    background-color: #c5876f;
     color: white;
     padding: .5em;
 }
@@ -33,8 +34,22 @@ header ol li + li {
 
 .news-list {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .news-source, .news-subtext {
     color: #8a8181;
+    padding: 0;
+    margin: 0;
+}
+
+article {
+    margin: 0.3em;
+}
+
+article h2 {
+    font-family: Times, 'Times New Roman', serif;
+    padding: 0;
+    margin: 0;
 }
